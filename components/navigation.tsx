@@ -25,7 +25,6 @@ export function Navigation() {
       <nav aria-label="Main navigation" id="main-navigation" className={open ? "navigation is-open" : "navigation"}>
         {navigation.map(item => <a key={item} href={`#${item.toLowerCase()}`} aria-current={active === item.toLowerCase() ? "location" : undefined} onClick={() => setOpen(false)}>{item}</a>)}
       </nav>
-      <span className="header-caption mono">DATA / PORTFOLIO</span>
       <button className="menu-toggle" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>{open ? <X size={22}/> : <Menu size={22}/>}</button>
     </div>
   </header>;

@@ -13,6 +13,7 @@ export const navigation = ["Home", "About", "Projects", "Experience", "Skills", 
 export const projects = [
   {
     id: "customer-churn", number: "01", title: "Customer churn analysis", category: "Analytics & predictive modeling",
+    github: "https://github.com/revxx26/telco-customer-churn-analysis",
     description: "Understanding why customers leave, and making churn risk easier to explore.",
     tools: ["SQL", "Python", "SQLite", "Tableau"], image: "/images/projects/customer-churn-dashboard.jpg",
     imageAlt: "Original Tableau customer churn dashboard showing contract, tenure, payment method, and customer risk analysis",
@@ -26,6 +27,7 @@ export const projects = [
   },
   {
     id: "mbg-sentiment", number: "02", title: "MBG sentiment analysis", category: "Natural language processing",
+    github: "",
     description: "Exploring sentiment in Indonesian social media posts about the MBG program.",
     tools: ["Python", "NLTK", "Sastrawi", "scikit-learn"], image: "/images/projects/mbg-confusion-matrix.png",
     imageAlt: "Original notebook confusion matrix: 274 positive posts classified correctly and 30 negative posts classified correctly, with 71 misclassified negative posts",
@@ -40,6 +42,7 @@ export const projects = [
   },
   {
     id: "east-java-poverty", number: "03", title: "East Java poverty classification", category: "Academic team project",
+    github: "",
     description: "Examining regional socioeconomic indicators through classification.",
     tools: ["Python", "Orange", "Naïve Bayes"], image: "/images/projects/east-java-regional-analysis.png",
     imageAlt: "Original Orange scatter plot from the academic paper comparing socioeconomic indicators for East Java regions",
