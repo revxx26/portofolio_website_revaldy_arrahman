@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/content/portfolio";
 
@@ -21,7 +22,7 @@ export function Navigation() {
   }, []);
   return <header className="site-header">
     <div className="header-inner">
-      <a href="#home" className="wordmark" aria-label="Revaldy Arrahman, home" onClick={() => setOpen(false)}>ra<span>.</span></a>
+      <a href="#home" className="wordmark" aria-label="Revaldy Arrahman, home" onClick={() => setOpen(false)}><Image src="/images/brand/revaldy-character-head.png" alt="" width={52} height={52} preload/></a>
       <nav aria-label="Main navigation" id="main-navigation" className={open ? "navigation is-open" : "navigation"}>
         {navigation.map(item => <a key={item} href={`#${item.toLowerCase()}`} aria-current={active === item.toLowerCase() ? "location" : undefined} onClick={() => setOpen(false)}>{item}</a>)}
       </nav>
