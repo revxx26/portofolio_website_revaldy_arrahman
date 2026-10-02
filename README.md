@@ -49,6 +49,11 @@ The supplied portrait and original ATS PDF are now connected through `profile.ph
 
 ## Hosting
 
+Render deployment is configured by `render.yaml`, with Node pinned in
+`.node-version`. See `docs/render-deployment.md` for the repository layout,
+dashboard settings, and verification steps. The Render build also runs the
+export checks before publishing `out/`.
+
 `.openai/hosting.json` identifies the private Sites project and uses the Next.js static `out/` build. Keep that project identity when publishing later updates.
 
 Production checks and their limits are documented in `docs/production-readiness.md`. The active portrait and organization logos use smaller WebP variants; original PNG assets are preserved.

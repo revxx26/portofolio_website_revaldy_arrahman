@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: revaldy-arrahman-portfolio
+    runtime: static
+    buildCommand: npm ci --include=dev && npm run build && npm run verify
+    staticPublishPath: ./out
+    autoDeployTrigger: commit
