@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ChevronDown, Maximize2, Mail, Github, Linkedin, Database, Bot } from "lucide-react";
-import { profile, projects, skills } from "@/content/portfolio";
+import { profile, projects, skills, experiencePeriods } from "@/content/portfolio";
 import { ContactForm } from "@/components/contact-form";
 
 function SectionHeading({ number, label, title, description }: { number: string; label: string; title: string; description?: string }) {
@@ -26,10 +26,14 @@ export function Projects() {
   </section>;
 }
 
+function ExperiencePeriod({ period }: { period: { start: string; startLabel: string; end: string; endLabel: string } }) {
+  return <p className="experience-period"><time dateTime={period.start}>{period.startLabel}</time>{" – "}<time dateTime={period.end}>{period.endLabel}</time></p>;
+}
+
 export function Experience() {
   return <section id="experience" className="experience section wrap">
     <SectionHeading number="03" label="EXPERIENCE" title="Working with data in practice."/>
-    <div className="experience-list"><article className="experience-row"><div className="experience-title"><Image className="organization-logo" src="/images/organizations/kementan-128.webp" alt="Logo Kementerian Pertanian Republik Indonesia" width={64} height={64}/><div className="experience-identity"><span className="mono">DATA OPERATIONS SUPPORT</span><h3>Kementerian Pertanian<br/>Republik Indonesia</h3><span className="experience-type">HOK program</span></div></div><div className="experience-body"><p>Managed and processed sugarcane farmer records from regions across Indonesia. Supported data validation and processing through the Ministry’s system, helping records progress toward fund disbursement.</p><div className="ministry-flow" aria-label="HOK program data workflow"><span>Farmer records</span><span aria-hidden="true">→</span><span>Validation &amp; processing</span><span aria-hidden="true">→</span><span>Verification</span><span aria-hidden="true">→</span><span>Fund disbursement</span></div><p className="experience-note">My work supported the data administration and processing stages of this workflow.</p></div></article><article className="experience-row"><div className="experience-title"><Image className="organization-logo" src="/images/organizations/palapa-128.webp" alt="Logo PT Palapa Alta Utama" width={64} height={64}/><div className="experience-identity"><span className="mono">VOCATIONAL SCHOOL INTERNSHIP</span><h3>PT Palapa Alta Utama</h3><span className="experience-type">Internship / PKL</span></div></div><div className="experience-body"><p>Handled company e-commerce administration and helped configure network printing on employee PCs.</p><p className="experience-note">Workplace operations with limited IT and network support.</p></div></article></div>
+    <div className="experience-list"><article className="experience-row"><div className="experience-title"><Image className="organization-logo" src="/images/organizations/kementan-128.webp" alt="Logo Kementerian Pertanian Republik Indonesia" width={64} height={64}/><div className="experience-identity"><span className="mono">DATA OPERATIONS SUPPORT</span><h3>Kementerian Pertanian<br/>Republik Indonesia</h3><span className="experience-type">HOK program</span><ExperiencePeriod period={experiencePeriods.ministry}/></div></div><div className="experience-body"><p>Managed and processed sugarcane farmer records from regions across Indonesia. Supported data validation and processing through the Ministry’s system, helping records progress toward fund disbursement.</p><div className="ministry-flow" aria-label="HOK program data workflow"><span>Farmer records</span><span aria-hidden="true">→</span><span>Validation &amp; processing</span><span aria-hidden="true">→</span><span>Verification</span><span aria-hidden="true">→</span><span>Fund disbursement</span></div><p className="experience-note">My work supported the data administration and processing stages of this workflow.</p></div></article><article className="experience-row"><div className="experience-title"><Image className="organization-logo" src="/images/organizations/palapa-128.webp" alt="Logo PT Palapa Alta Utama" width={64} height={64}/><div className="experience-identity"><span className="mono">VOCATIONAL SCHOOL INTERNSHIP</span><h3>PT Palapa Alta Utama</h3><span className="experience-type">Internship / PKL</span><ExperiencePeriod period={experiencePeriods.palapa}/></div></div><div className="experience-body"><p>Handled company e-commerce administration and helped configure network printing on employee PCs.</p><p className="experience-note">Workplace operations with limited IT and network support.</p></div></article></div>
   </section>;
 }
 

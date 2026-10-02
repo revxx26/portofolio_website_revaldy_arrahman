@@ -15,7 +15,7 @@ npm run preview
 
 ## Content and assets
 
-The content source is `content/portfolio.ts`. The three project case studies and original screenshots come from `../Revaldy_Arrahman_Portfolio_Final.pptx`, slides 3–5. Slide 2 supplies education, slide 6 supplies tools, and slide 7 supplies experience. Additional positioning and engineering interests come from the supplied website brief. No experience dates or project links were supplied.
+The content source is `content/portfolio.ts`. The three project case studies and original screenshots come from `../Revaldy_Arrahman_Portfolio_Final.pptx`, slides 3–5. Slide 2 supplies education, slide 6 supplies tools, and slide 7 supplies experience. Additional positioning and engineering interests come from the supplied website brief. Work periods come from the supplied ATS CV: December 2025–February 2026 for the Ministry and April 2022–June 2022 for PT Palapa Alta Utama. Dates use the supplied month/year precision. Project GitHub destinations follow the owner's later instructions.
 
 Preserve the source qualifications: MBG notebook accuracy is 81.07%, while the paper reports 90.11%; East Java paper accuracy is 92.1%, with AUC 0.276. East Java is an academic team project, with no supplied attribution of individual tasks.
 

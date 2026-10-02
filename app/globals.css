@@ -136,6 +136,8 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 .experience-identity > .mono { display:block; color:var(--muted); font-size:10px; }
 .experience-title h3 { font-weight:500; font-size:22px; line-height:1.4; letter-spacing:-.03em; margin:16px 0 12px; }
 .experience-type { font-size:13px; color:var(--muted); }
+.experience-period { font-size:13px; line-height:1.7; color:var(--accent); margin:8px 0 0; }
+.experience-period time { white-space:nowrap; }
 .experience-body p { margin:0; color:var(--muted); font-size:15px; }
 .ministry-flow { display:flex; align-items:center; flex-wrap:wrap; gap:9px; margin:22px 0 16px; }
 .ministry-flow span { font-size:11px; color:var(--accent); }

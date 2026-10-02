@@ -10,6 +10,12 @@ export const profile = {
 
 export const navigation = ["Home", "About", "Projects", "Experience", "Skills", "Contact"];
 
+// Month/year ranges from the supplied ATS CV; no exact day was provided.
+export const experiencePeriods = {
+  ministry: { start: "2025-12", startLabel: "December 2025", end: "2026-02", endLabel: "February 2026" },
+  palapa: { start: "2022-04", startLabel: "April 2022", end: "2022-06", endLabel: "June 2022" },
+};
+
 export const projects = [
   {
     id: "customer-churn", number: "01", title: "Customer churn analysis", category: "Analytics & predictive modeling",
