@@ -9,11 +9,27 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) if (entry.isIntersecting) setActive(entry.target.id);
-    }, { rootMargin: "-15% 0px -65% 0px" });
-    document.querySelectorAll("main > section[id]").forEach(section => observer.observe(section));
-    return () => observer.disconnect();
+    const sections = [...document.querySelectorAll<HTMLElement>("main > section[id]")];
+    let frame: number | null = null;
+    const update = () => {
+      frame = null;
+      const marker = Math.max(document.querySelector("header")?.getBoundingClientRect().height ?? 0, window.innerHeight * 0.25);
+      let current = sections[0]?.id ?? "home";
+      for (const section of sections) if (section.getBoundingClientRect().top <= marker) current = section.id;
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) current = sections.at(-1)?.id ?? current;
+      setActive(current);
+    };
+    const schedule = () => { if (frame === null) frame = window.requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("hashchange", schedule);
+    return () => {
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.removeEventListener("hashchange", schedule);
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
   }, []);
   useEffect(() => {
     const close = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); };

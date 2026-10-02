@@ -8,7 +8,7 @@ export default function Home() {
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     <Navigation />
-    <main id="main">
+    <main id="main" tabIndex={-1}>
       <section id="home" className="hero wrap">
         <div className="hero-topline mono"><span>INFORMATION SYSTEMS / DATA</span><span>PERSONAL PORTFOLIO</span></div>
         <div className="hero-layout">

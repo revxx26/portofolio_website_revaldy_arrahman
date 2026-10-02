@@ -9,6 +9,8 @@ npm install
 npm run dev
 npm run typecheck
 npm run build
+npm run verify
+npm run preview
 ```
 
 ## Content and assets
@@ -48,3 +50,5 @@ The supplied portrait and original ATS PDF are now connected through `profile.ph
 ## Hosting
 
 `.openai/hosting.json` identifies the private Sites project and uses the Next.js static `out/` build. Keep that project identity when publishing later updates.
+
+Production checks and their limits are documented in `docs/production-readiness.md`. The active portrait and organization logos use smaller WebP variants; original PNG assets are preserved.

@@ -4,7 +4,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/revaldy-arrahman-369a56316",
   github: "https://github.com/revxx26",
   // Set these only after inspecting the supplied files. Paths are relative to public/.
-  photo: "/images/profile/revaldy-arrahman-transparent.png",
+  photo: "/images/profile/revaldy-arrahman-760.webp",
   cv: "/documents/cv/CV_ATS_REVALDY_ARRAHMAN.pdf",
 };
 
