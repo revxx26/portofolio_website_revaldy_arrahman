@@ -8,7 +8,7 @@ export const profile = {
   cv: "/documents/cv/CV_ATS_REVALDY_ARRAHMAN.pdf",
 };
 
-export const navigation = ["Home", "About", "Experience", "Projects", "Skills", "Contact"];
+export const navigation = ["Home", "About", "Projects", "Experience", "Skills", "Contact"];
 
 export const projects = [
   {
