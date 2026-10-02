@@ -132,9 +132,6 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 .additional-figure { margin:30px 0 0; }
 .additional-figure img { display:block; width:auto; max-width:100%; height:auto; max-height:340px; object-fit:contain; }
 .additional-figure figcaption { margin-top:10px; color:var(--muted); font-size:12px; }
-.project-source { display:flex; justify-content:space-between; gap:20px; border-top:1px solid #cdd3c9; padding-top:25px; color:var(--muted); }
-.project-source a { display:flex; align-items:center; gap:10px; font-size:13px; }
-.project-source a:hover { color:var(--accent); }
 .experience-list { margin-left:262px; }
 .experience-row { display:grid; grid-template-columns:300px 1fr; gap:50px; border-top:1px solid var(--line); padding:34px 0; }
 .experience-title > .mono { color:var(--muted); font-size:10px; }
@@ -151,17 +148,31 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 .skill-logo img { width:36px; height:36px; object-fit:contain; }
 .skill-card h3 { font-size:15px; line-height:1.4; font-weight:600; text-align:center; margin:0; }
 .contact { background:var(--accent); color:#fafaf8; }
-.contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:100px; padding-block:75px; }
+.contact-inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:100px; padding-block:75px; align-items:start; }
 .contact-inner > div > .mono { color:#c7d3c9; }
 .contact h2 { font-size:64px; line-height:1.06; margin-top:28px; font-weight:400; letter-spacing:-.055em; }
 .contact h2 em { font-family:inherit; font-style:normal; font-weight:600; color:#d8e5c1; }
-.contact-copy { align-self:center; }
-.contact-copy > p { font-size:18px; line-height:1.7; max-width:420px; margin:0 0 22px; color:#e1e8df; }
-.contact-copy .contact-pending { font-size:13px; color:#c7d3c9; }
-.contact-links { display:grid; gap:14px; margin:24px 0; }
-.contact-links a { display:flex; align-items:center; gap:12px; word-break:break-word; }
-.deck-link { display:inline-flex; gap:10px; align-items:center; font-size:13px; padding-bottom:7px; border-bottom:1px solid #829989; margin-top:10px; }
-.contact-links a:hover,.deck-link:hover { color:#d8e5c1; }
+.contact-copy > p { font-size:17px; line-height:1.7; max-width:420px; margin:26px 0; color:#e1e8df; }
+.contact-links { display:grid; gap:4px; margin-top:28px; }
+.contact-links a { display:flex; align-items:center; gap:14px; min-height:48px; width:fit-content; max-width:100%; overflow-wrap:anywhere; }
+.contact-links svg { flex-shrink:0; }
+.contact-links small { display:block; color:#c7d3c9; font-size:12px; }
+.contact-links a:hover { color:#d8e5c1; }
+.contact a:focus-visible,.contact button:focus-visible { outline-color:#d8e5c1; }
+.contact-form { padding-top:5px; min-width:0; }
+.contact-form h3 { font-size:27px; line-height:1.3; letter-spacing:-.03em; font-weight:500; margin:0 0 12px; }
+.form-intro { color:#e1e8df; font-size:15px; margin:0 0 28px; max-width:390px; }
+.contact-field { display:grid; gap:8px; margin-bottom:20px; }
+.contact-field label { font-size:14px; font-weight:600; }
+.contact-field input,.contact-field textarea { width:100%; min-width:0; padding:12px 14px; font:inherit; font-size:16px; line-height:1.5; color:var(--ink); background:var(--paper); border:1px solid #b6c8bb; border-radius:3px; }
+.contact-field input { min-height:50px; }
+.contact-field textarea { resize:vertical; min-height:140px; }
+.contact-field input::placeholder,.contact-field textarea::placeholder { color:#68736b; opacity:1; }
+.contact-field input:focus-visible,.contact-field textarea:focus-visible { outline:2px solid #d8e5c1; outline-offset:4px; }
+.contact-submit { background:#d8e5c1; color:var(--accent); }
+.contact-submit:hover { background:#e7efda; }
+.form-note,.form-status { font-size:12px; line-height:1.7; color:#d0ddd2; margin:14px 0 0; }
+.form-status:empty { display:none; }
 .footer { display:flex; justify-content:space-between; align-items:center; padding-block:28px; gap:20px; }
 .footer-name { font-size:14px; font-weight:600; }
 .footer-name span { color:var(--accent); }
@@ -218,8 +229,6 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
   .case-process li { display:flex; gap:20px; }
   .case-process li span { margin:0; padding-top:3px; }
   .case-limitation { padding-left:14px; }
-  .project-source { align-items:flex-start; flex-direction:column; gap:10px; }
-  .project-source .mono { font-size:10px; }
   .experience-row { grid-template-columns:1fr; gap:22px; padding-block:28px; }
   .experience-title h3 { margin:12px 0 8px; font-size:22px; }
   .ministry-flow { gap:7px; }

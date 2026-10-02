@@ -29,7 +29,9 @@ public/documents/cv/
 
 Inspect any new photo, CV, screenshot, or deck before adding it. To insert a real portrait, place it in `public/images/profile/` and set `profile.photo` to `/images/profile/filename.jpg`. This replaces the hero focus panel within its existing area. To enable Download CV, add the actual CV and set `profile.cv` to `/documents/cv/filename.pdf`. Configure real email, LinkedIn, and GitHub values in `profile`; blank values never produce fake links.
 
-The source deck is downloadable as a portfolio deck, never mislabeled as a CV. Extracted source inspection files are kept locally in ignored `source-material/`.
+Portfolio deck download links have been removed. The original source deck and extracted source inspection files remain available locally. The ATS CV remains downloadable from the hero.
+
+Contact includes the owner's supplied email, LinkedIn, and GitHub profiles. The email and message form uses native email validation and opens a prefilled `mailto:` draft; visitors send the draft through their email app. It does not submit to a server or store messages.
 
 ## Design system
 

@@ -1,8 +1,8 @@
 export const profile = {
   name: "Revaldy Arrahman",
-  email: "",
-  linkedin: "",
-  github: "",
+  email: "revaldyarrhmn@gmail.com",
+  linkedin: "https://www.linkedin.com/in/revaldy-arrahman-369a56316",
+  github: "https://github.com/revxx26",
   // Set these only after inspecting the supplied files. Paths are relative to public/.
   photo: "/images/profile/revaldy-arrahman-transparent.png",
   cv: "/documents/cv/CV_ATS_REVALDY_ARRAHMAN.pdf",

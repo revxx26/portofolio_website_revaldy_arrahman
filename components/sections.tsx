@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Download, ChevronDown, Maximize2, Mail, Github, Linkedin, Database, Bot } from "lucide-react";
+import { ChevronDown, Maximize2, Mail, Github, Linkedin, Database, Bot } from "lucide-react";
 import { profile, projects, skills } from "@/content/portfolio";
+import { ContactForm } from "@/components/contact-form";
 
 function SectionHeading({ number, label, title, description }: { number: string; label: string; title: string; description?: string }) {
   return <div className="section-heading"><div className="section-index mono"><span>{number}</span>{label}</div><div><h2>{title}</h2>{description && <p className="section-description">{description}</p>}</div></div>;
@@ -21,7 +22,7 @@ export function Projects() {
       <figure className={`project-figure ${index === 0 ? "dashboard-figure" : "analysis-figure"}`}><a href={project.image} target="_blank" rel="noreferrer" aria-label={`View full-size ${project.title} figure`} className="figure-link"><div className="figure-image"><Image src={project.image} alt={project.imageAlt} width={index === 0 ? 1597 : index === 1 ? 494 : 642} height={index === 0 ? 888 : index === 1 ? 451 : 475} sizes="(max-width: 760px) 100vw, 65vw"/></div><span className="figure-expand"><Maximize2 size={16}/><span className="sr-only">View full size</span></span></a><figcaption className="mono">{project.figureLabel}</figcaption></figure></div>
       <details className="case-study"><summary><span className="case-toggle"><span className="case-label-closed">View case study</span><span className="case-label-open">Close case study</span><ChevronDown className="case-chevron" size={18} aria-hidden="true"/></span><span className="summary-sub">Objective, process &amp; findings</span></summary><div className="case-content"><div className="case-top"><div><h4>01 / The question</h4><p>{project.objective}</p></div><div><h4>02 / The data</h4><p>{project.source}</p></div></div><div className="case-process"><h4>03 / The process</h4><ol>{project.process.map((step, stepIndex) => <li key={step}><span className="mono">0{stepIndex + 1}</span><p>{step}</p></li>)}</ol></div><div className="case-top"><div><h4>04 / The output</h4><p>{project.output}</p></div><div><h4>05 / The findings</h4><p>{project.insight}</p></div></div><div className="case-limitation"><h4>Reading the results carefully</h4><p>{project.limitation}</p></div>{project.additionalImages.map(figure => <figure className="additional-figure" key={figure.src}><a href={figure.src} target="_blank" rel="noreferrer" aria-label={`View full-size ${figure.caption}`}><Image src={figure.src} alt={figure.alt} width={950} height={figure.src.includes("evaluation") ? 178 : 324} sizes="(max-width: 760px) 100vw, 800px"/></a><figcaption>{figure.caption}</figcaption></figure>)}</div></details>
     </article>)}</div>
-    <div className="project-source"><span className="mono">PROJECT SOURCE</span><a href="/documents/portfolio-slides/Revaldy_Arrahman_Portfolio.pptx" download><Download size={16}/>Download the portfolio deck</a></div></div>
+    </div>
   </section>;
 }
 
@@ -47,8 +48,21 @@ export function Skills() {
 }
 
 export function Contact() {
-  const hasContact = Boolean(profile.email || profile.linkedin || profile.github);
-  return <section id="contact" className="contact"><div className="wrap contact-inner"><div><span className="mono">05 / WHAT’S NEXT</span><h2>Let’s work<br/>with <em>data.</em></h2></div><div className="contact-copy"><p>I’m interested in Data Analyst and Data Engineer internships and early-career opportunities.</p>{hasContact ? <div className="contact-links">{profile.email && <a href={`mailto:${profile.email}`}><Mail size={18}/>{profile.email}</a>}{profile.linkedin && <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18}/>LinkedIn</a>}{profile.github && <a href={profile.github} target="_blank" rel="noreferrer"><Github size={18}/>GitHub</a>}</div> : <p className="contact-pending">Contact details coming soon.</p>}<a className="deck-link" href="/documents/portfolio-slides/Revaldy_Arrahman_Portfolio.pptx" download><Download size={16}/>Download portfolio deck</a></div></div></section>;
+  return <section id="contact" className="contact">
+    <div className="wrap contact-inner">
+      <div className="contact-copy">
+        <span className="mono">05 / WHAT’S NEXT</span>
+        <h2>Let’s work<br/>with <em>data.</em></h2>
+        <p>I’m interested in Data Analyst and Data Engineer internships and early-career opportunities.</p>
+        <div className="contact-links">
+          <a href={`mailto:${profile.email}`}><Mail size={20} aria-hidden="true"/><span>{profile.email}</span></a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={20} aria-hidden="true"/><span>Revaldy Arrahman <small>LinkedIn</small></span></a>
+          <a href={profile.github} target="_blank" rel="noreferrer"><Github size={20} aria-hidden="true"/><span>revxx26 <small>GitHub</small></span></a>
+        </div>
+      </div>
+      <ContactForm recipient={profile.email}/>
+    </div>
+  </section>;
 }
 
 export function Footer() {
