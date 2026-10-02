@@ -84,7 +84,7 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 .education-bottom > .mono { font-size:10px; color:var(--muted); text-align:right; }
 .projects { background:#f0f2ed; border-block:1px solid var(--line); }
 .project { padding:44px 0 30px; border-top:1px solid #cdd3c9; }
-.project-overview { display:grid; grid-template-columns:340px minmax(0,1fr); gap:60px; align-items:center; }
+.project-overview { display:grid; grid-template-columns:340px minmax(0,1fr); gap:60px; align-items:start; }
 .project-category { display:flex; gap:20px; font-size:11px; text-transform:uppercase; color:var(--muted); }
 .project-category > span { color:var(--accent); }
 .project-copy h3 { font-size:32px; line-height:1.2; letter-spacing:-.04em; font-weight:500; margin:23px 0 17px; max-width:350px; }
@@ -98,17 +98,11 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 .project-github:hover { background:#e2e8dc; border-color:#8e9e82; }
 .project-figure { margin:0; min-width:0; }
 .figure-link { position:relative; display:block; }
-.figure-image { background:white; border:1px solid #dbe0d5; padding:17px; min-height:250px; display:flex; align-items:center; justify-content:center; }
-.figure-image img { width:100%; height:auto; display:block; object-fit:contain; }
+.figure-image { background:white; border:1px solid #dbe0d5; padding:17px; height:clamp(250px,26vw,360px); display:flex; align-items:center; justify-content:center; }
+.figure-image img { width:100%; height:100%; display:block; object-fit:contain; }
 .figure-expand { background:var(--paper); border:1px solid var(--line); position:absolute; bottom:11px; right:11px; padding:9px; color:var(--accent); transition:background .18s; }
 .figure-link:hover .figure-expand { background:var(--wash); }
 .project-figure figcaption { margin-top:12px; font-size:10px; color:var(--muted); }
-.analysis-figure .figure-image { height:290px; padding:23px; }
-.analysis-figure .figure-image img { width:auto; max-width:100%; max-height:240px; }
-.project-2 .project-overview,.project-3 .project-overview { grid-template-columns:minmax(0,1fr) 470px; }
-.project-2 .project-copy,.project-3 .project-copy { padding-left:70px; }
-.project-2 .project-copy h3,.project-3 .project-copy h3 { max-width:440px; }
-.project-2 .project-copy > p,.project-3 .project-copy > p { max-width:380px; }
 .case-study { margin-top:26px; }
 .case-study summary { display:flex; justify-content:space-between; gap:20px; align-items:center; cursor:pointer; padding:18px 0; border-top:1px solid #d4dad0; font-size:14px; list-style:none; }
 .case-study summary::-webkit-details-marker { display:none; }
@@ -191,8 +185,6 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
   .about-copy,.experience-list { margin-left:194px; }
   .about-copy { margin-left:0; }
   .project-overview { grid-template-columns:280px 1fr; gap:35px; }
-  .project-2 .project-overview,.project-3 .project-overview { grid-template-columns:1fr 380px; }
-  .project-2 .project-copy,.project-3 .project-copy { padding-left:0; }
   .experience-row { grid-template-columns:235px 1fr; gap:25px; }
   .skills-grid { grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
   .skill-card { min-height:145px; padding-inline:10px; }
@@ -216,15 +208,12 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
   .education-bottom strong span { text-align:right; }
   .education-bottom > .mono { font-size:9px; }
   .project { padding:30px 0 20px; }
-  .project-overview,.project-2 .project-overview,.project-3 .project-overview { grid-template-columns:1fr; gap:25px; }
+  .project-overview { grid-template-columns:1fr; gap:25px; }
   .project-category { font-size:10px; gap:16px; }
   .project-copy h3 { font-size:29px; margin-top:18px; max-width:480px; }
-  .project-copy > p,.project-2 .project-copy > p,.project-3 .project-copy > p { max-width:500px; margin-bottom:20px; }
-  .project-2 .project-copy,.project-3 .project-copy { padding-left:0; }
+  .project-copy > p { max-width:500px; margin-bottom:20px; }
   .project-stat { margin-top:20px; }
-  .figure-image { min-height:0; padding:9px; }
-  .analysis-figure .figure-image { height:275px; padding:15px; }
-  .analysis-figure .figure-image img { max-height:245px; }
+  .figure-image { height:clamp(240px,72vw,340px); padding:12px; }
   .summary-sub { display:none; }
   .case-study { margin-top:18px; }
   .case-content { padding:24px 19px; }
