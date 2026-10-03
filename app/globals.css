@@ -690,6 +690,8 @@ h2 { font-size:clamp(29px,3vw,40px); font-weight:500; line-height:1.2; letter-sp
 
 .header-controls button:disabled { opacity:.55; cursor:wait; }
 
+@media(min-width:1241px) { .navigation { margin-inline:auto; } .header-controls { margin-left:0; } }
+
 @media(max-width:1240px) { .navigation { display:none; } .mobile-navigation { display:block; } }
 
 @media(max-width:760px) { .header-inner { gap:12px; } .header-controls { gap:6px; } }
