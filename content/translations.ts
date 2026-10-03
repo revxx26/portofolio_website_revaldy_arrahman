@@ -1,5 +1,5 @@
 export const indonesian: Record<string, string> = {
-  "Selected projects.": "Proyek pilihan.",
+  "Selected projects": "Proyek pilihan",
   "At a glance":"Ringkasan proyek", "Objective":"Tujuan", "Deliverable":"Hasil pengerjaan", "Key findings":"Temuan utama",
   "How the project was built":"Langkah pengerjaan", "Data used":"Data yang digunakan", "What to keep in mind":"Catatan penting", "Supporting visuals":"Visual pendukung", "Overview, findings & process":"Ringkasan, temuan & proses",
 
@@ -32,13 +32,13 @@ export const indonesian: Record<string, string> = {
 
   "INFORMATION SYSTEMS / DATA":"SISTEM INFORMASI / DATA", "PERSONAL PORTFOLIO":"PORTOFOLIO PRIBADI", "Hello, I’m Revaldy.":"Halo, saya Revaldy.", "Data Analyst &":"Peminat Analisis Data &", "Data Engineer Enthusiast":"Rekayasa Data",
 
-  "I work with data to find the useful information within it. From careful preparation to clear analysis, I’m interested in how data becomes something people can use.":"Saya mengolah data untuk menemukan informasi yang berguna. Mulai dari persiapan yang teliti hingga analisis yang jelas, saya tertarik menjadikan data sebagai informasi yang bisa dimanfaatkan.",
+  "I’m an Information Systems student working with SQL, Python, Tableau, and Power BI to analyze data and build dashboards.":"Saya mahasiswa Sistem Informasi yang menggunakan SQL, Python, Tableau, dan Power BI untuk menganalisis data dan membuat dashboard.",
 
   "View projects":"Lihat proyek", "Download CV":"Unduh CV", "CV coming soon":"CV segera tersedia", "Professional focus":"Fokus profesional", "MY FOCUS":"FOKUS SAYA", "From raw data":"Dari data mentah", "to clear":"menjadi", "understanding.":"pemahaman yang jelas.", "Prepare the data":"Siapkan data", "Find the patterns":"Temukan pola", "Explain the insights":"Jelaskan temuan", "ANALYTICS + ENGINEERING":"ANALISIS + REKAYASA DATA", "Interested in internships &":"Terbuka untuk magang &", "early-career opportunities":"peluang awal karier", "Explore the work below":"Jelajahi karya saya",
 
-  "ABOUT":"TENTANG", "A curious mind. A careful approach.":"Rasa ingin tahu. Pendekatan yang teliti.", "I’m an Information Systems student with an interest in the whole data journey: how it’s prepared, what it tells us, and how we communicate it.":"Saya mahasiswa Sistem Informasi yang tertarik pada seluruh proses pengolahan data: cara menyiapkannya, informasi yang dihasilkan, dan cara menyampaikannya.",
+  "ABOUT":"TENTANG", "About me":"Tentang saya", "I’m an Information Systems student with an interest in the whole data journey: how it’s prepared, what it tells us, and how we communicate it.":"Saya mahasiswa Sistem Informasi yang tertarik pada seluruh proses pengolahan data: cara menyiapkannya, informasi yang dihasilkan, dan cara menyampaikannya.",
 
-  "I enjoy finding patterns, checking data quality, and making results easy to understand. I’m detail-oriented, adaptable, and comfortable working with a team.":"Saya senang menemukan pola, memeriksa kualitas data, dan menyajikan hasil yang mudah dipahami. Saya teliti, mudah beradaptasi, dan terbiasa bekerja dalam tim.", "Data analytics":"Analisis data", "Data engineering":"Rekayasa data", "ACADEMIC FOUNDATION":"PENDIDIKAN", "Information Systems":"Sistem Informasi", "GPA":"IPK", "SEMESTER 7":"SEMESTER 7", "AS LISTED IN PORTFOLIO":"SESUAI DATA PORTOFOLIO",
+  "In team projects, I contribute Python code for data analysis. I’ve also taught Excel to PAUD teachers and introduced Power BI to students at SMK Negeri 22 Jakarta.":"Dalam proyek tim, saya berkontribusi menulis kode Python untuk analisis data. Saya juga pernah mengajar Excel kepada guru PAUD dan memperkenalkan Power BI kepada siswa SMK Negeri 22 Jakarta.", "Data analytics":"Analisis data", "Data engineering":"Rekayasa data", "ACADEMIC FOUNDATION":"PENDIDIKAN", "Information Systems":"Sistem Informasi", "GPA":"IPK", "SEMESTER 7":"SEMESTER 7", "AS LISTED IN PORTFOLIO":"SESUAI DATA PORTOFOLIO",
 
   "SELECTED WORK":"PROYEK PILIHAN", "Questions explored through data.":"Menjawab pertanyaan melalui data.", "Three projects. The question, the work, and what the evidence shows.":"Tiga proyek: pertanyaan, proses pengerjaan, dan hasil analisisnya.", "My contribution:":"Kontribusi saya:", "Project tools":"Tools proyek", "View on GitHub":"Lihat di GitHub", "Enlarge":"Perbesar", "View case study":"Lihat studi kasus", "Close case study":"Tutup studi kasus", "Objective, process & findings":"Tujuan, proses & temuan", "01 / The question":"01 / Pertanyaan", "02 / The data":"02 / Data", "03 / The process":"03 / Proses", "04 / The output":"04 / Hasil", "05 / The findings":"05 / Temuan", "Reading the results carefully":"Memahami hasil dengan cermat",
 

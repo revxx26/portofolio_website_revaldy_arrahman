@@ -60,7 +60,7 @@ export function Projects() {
 
   return <section id="projects" className="projects section">
 
-    <div className="wrap"><SectionHeading number="02" label={t("SELECTED WORK")} title={t("Questions explored through data.")} mobileTitle={t("Selected projects.")} description={t("The question, the work, and what the evidence shows.")}/>
+    <div className="wrap"><SectionHeading number="02" label={t("SELECTED WORK")} title={t("Selected projects")} mobileTitle={t("Selected projects")} description={t("The question, the work, and what the evidence shows.")}/>
 
     <div className="project-list">{projects.map((project, index) => <article className={`project project-${index + 1}`} key={project.id} id={project.id}>
 
