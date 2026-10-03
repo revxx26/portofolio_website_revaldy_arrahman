@@ -36,6 +36,19 @@ in Blueprint assumes the project itself is the repository root.
 No start command, PORT setting, local database, or catch-all SPA rewrite is
 needed. Next.js exports the homepage and `404.html` directly.
 
+## Safari on iOS 16.3
+
+Use `npm run build`, which explicitly selects Webpack and the Safari/iOS 16.3
+Browserslist targets in `package.json`. Do not replace it with bare `next build`:
+the default Turbopack output shipped a class static initialization block in the
+Next.js error-boundary chunk. Safari 16.3 cannot parse that syntax, so hydration
+never starts and the entire page's JavaScript controls stay inactive.
+
+`npm run verify` also parses the exported JavaScript and checks that class static
+blocks and unsupported regexp literals do not reappear. This is a regression
+check for the identified failure, not a substitute for testing on an actual
+iPhone. See [the compatibility fix record](ios-16-3-compatibility.md).
+
 ## Environment and Sanity
 
 Set these in Render > Environment:
