@@ -4,10 +4,10 @@ import {experiences} from './experience';
 export const fallbackContent = {
   profile: {...profile, analyticsId: '', linkedinLabel: 'Revaldy Arrahman', githubLabel: 'revxx26',
     greeting: 'Hello, I’m Revaldy.', headline: 'Data Analyst & Data Engineer Enthusiast',
-    intro: 'I’m an Information Systems student working with SQL, Python, Tableau, and Power BI to analyze data and build dashboards.',
+    intro: '',
     opportunity: 'Interested in internships & early-career opportunities',
     aboutTitle: 'About me',
-    aboutIntro: 'I’m an Information Systems student with an interest in the whole data journey: how it’s prepared, what it tells us, and how we communicate it.',
+    aboutIntro: 'I’m an Information Systems student working with SQL, Python, Tableau, and Power BI to analyze data and build dashboards.',
     aboutBody: 'In team projects, I contribute Python code for data analysis. I’ve also taught Excel to PAUD teachers and introduced Power BI to students at SMK Negeri 22 Jakarta.',
     university: 'Universitas Bina Sarana Informatika', universityLogo: '/images/organizations/ubsi-128.webp', degree: 'Information Systems', gpa: '3.84', semester: 'SEMESTER 7',
     contactIntro: 'I’m interested in Data Analyst and Data Engineer internships and early-career opportunities.',
