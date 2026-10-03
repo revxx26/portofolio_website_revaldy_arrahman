@@ -17,7 +17,7 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     let savedTheme: string | null = null;
     try { savedLanguage = localStorage.getItem("portfolio-language"); savedTheme = localStorage.getItem("portfolio-theme"); } catch {}
     setLanguageState(savedLanguage === "id" ? "id" : "en");
-    setTheme(savedTheme === "dark" || savedTheme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(savedTheme === "dark" ? "dark" : "light");
     setReady(true);
   }, []);
   useEffect(() => { if (ready) document.documentElement.lang = language; }, [language, ready]);
