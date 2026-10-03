@@ -24,11 +24,11 @@ import { TouchCard } from "@/components/touch-card";
 
 
 
-function SectionHeading({ number, label, title, description }: { number: string; label: string; title: string; description?: string }) {
+function SectionHeading({ number, label, title, mobileTitle, description }: { number: string; label: string; title: string; mobileTitle?: string; description?: string }) {
 
   const { t } = usePreferences();
 
-  return <div className="section-heading"><div className="section-index mono"><span>{number}</span>{label}</div><div><h2>{title}</h2>{description && <p className="section-description">{description}</p>}</div></div>;
+  return <div className="section-heading"><div className="section-index mono"><span>{number}</span>{label}</div><div><h2>{mobileTitle ? <><span className="section-title-desktop">{title}</span><span className="section-title-mobile">{mobileTitle}</span></> : title}</h2>{description && <p className="section-description">{description}</p>}</div></div>;
 
 }
 
@@ -60,7 +60,7 @@ export function Projects() {
 
   return <section id="projects" className="projects section">
 
-    <div className="wrap"><SectionHeading number="02" label={t("SELECTED WORK")} title={t("Questions explored through data.")} description={t("The question, the work, and what the evidence shows.")}/>
+    <div className="wrap"><SectionHeading number="02" label={t("SELECTED WORK")} title={t("Questions explored through data.")} mobileTitle={t("Selected projects.")} description={t("The question, the work, and what the evidence shows.")}/>
 
     <div className="project-list">{projects.map((project, index) => <article className={`project project-${index + 1}`} key={project.id} id={project.id}>
 

@@ -1,4 +1,5 @@
 export const indonesian: Record<string, string> = {
+  "Selected projects.": "Proyek pilihan.",
   "At a glance":"Ringkasan proyek", "Objective":"Tujuan", "Deliverable":"Hasil pengerjaan", "Key findings":"Temuan utama",
   "How the project was built":"Langkah pengerjaan", "Data used":"Data yang digunakan", "What to keep in mind":"Catatan penting", "Supporting visuals":"Visual pendukung", "Overview, findings & process":"Ringkasan, temuan & proses",
 
