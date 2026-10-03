@@ -20,6 +20,7 @@ import {LiveDemo} from "./live-demo";
 import {ProjectCaseStudy} from "./project-case-study";
 
 import { ImageViewerTrigger } from "@/components/image-viewer";
+import { TouchCard } from "@/components/touch-card";
 
 
 
@@ -123,7 +124,7 @@ export function Volunteer() {
 
     <SectionHeading number="04" label={t("VOLUNTEER")} title={t("Volunteering & Teaching")}/>
 
-    <div className="volunteer-grid">{volunteering.map(activity => <article className="volunteer-card" key={activity.id}>
+    <div className="volunteer-grid">{volunteering.map(activity => <TouchCard className="volunteer-card" key={activity.id}>
 
       <figure className="volunteer-figure">
 
@@ -141,7 +142,7 @@ export function Volunteer() {
 
       <div className="volunteer-copy"><p className="activity-role">{t(activity.role)}</p><p className="activity-date"><time dateTime={activity.date}>{t(activity.dateLabel)}</time></p><h3>{t(activity.title)}</h3><p className="activity-context">{t(activity.context)}</p><p>{t(activity.description)}</p></div>
 
-    </article>)}</div>
+    </TouchCard>)}</div>
 
   </section>;
 
@@ -159,7 +160,7 @@ export function Certifications() {
 
     <div className="wrap"><SectionHeading number="05" label={t("CERTIFICATIONS")} title={t("Certifications & Training")}/>
 
-      <div className="certification-grid">{certifications.map(certificate => <article className="certification-card" key={certificate.id}>
+      <div className="certification-grid">{certifications.map(certificate => <TouchCard className="certification-card" key={certificate.id}>
 
         <div className="certificate-preview">
 
@@ -169,7 +170,7 @@ export function Certifications() {
 
         <div className="certificate-copy"><p className="activity-role">{t(certificate.type)}</p><h3>{t(certificate.title)}</h3><p className="certificate-issuer">{t(certificate.issuer)}</p><p className="activity-context">{t(certificate.program)}</p><p className="certificate-date">{t(certificate.dateType)}{t(": ")}<time dateTime={certificate.date}>{t(certificate.dateLabel)}</time></p><p>{t(certificate.description)}</p><ImageViewerTrigger source={certificate.id} images={[{src:certificate.certificate,title:t(certificate.title),alt:t(certificate.imageAlt)},...certificate.gallery.map(item=>({src:item.src,title:t(item.caption),alt:t(item.alt)}))]} className="button secondary certificate-button" src={certificate.certificate} title={t(certificate.title)} alt={t(certificate.imageAlt)} label={`${t("View certificate")}: ${t(certificate.title)}`}>{t("View certificate")}</ImageViewerTrigger></div>
 
-      </article>)}</div>
+      </TouchCard>)}</div>
 
     </div>
 
@@ -191,7 +192,7 @@ export function Skills() {
 
     <ul className="skills-grid" aria-label={t("Skills and tools")}>
 
-      {skills.map(skill => <li className="skill-card" key={skill.name}>
+      {skills.map(skill => <TouchCard as="li" className="skill-card" key={skill.name}>
 
         <span className="skill-logo" aria-hidden="true">
 
@@ -201,7 +202,7 @@ export function Skills() {
 
         <h3>{skill.name}</h3>
 
-      </li>)}
+      </TouchCard>)}
 
     </ul>
 
@@ -257,7 +258,7 @@ export function Footer() {
 
   const {data: {profile}} = usePortfolio();
 
-  return <footer className="footer wrap"><a href="#home" className="footer-name">{profile.name}<span>{t(".")}</span></a><span className="mono">{t("DATA ANALYTICS & ENGINEERING")}</span><a href="#home">{t("Back to top ")}<span aria-hidden="true">{t("↑")}</span></a></footer>;
+  return <footer className="footer wrap"><a href="#home" className="footer-name">{profile.name}<span>{t(".")}</span></a><span className="mono">{t("DATA ANALYTICS & ENGINEERING")}</span></footer>;
 
 }
 

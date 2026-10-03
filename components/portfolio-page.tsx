@@ -8,6 +8,7 @@ import { Download } from "lucide-react";
 import { Navigation } from "@/components/navigation";
 import { ImageViewerProvider } from "@/components/image-viewer";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { BackToTop } from "@/components/back-to-top";
 import { PortfolioProvider, usePortfolio, type PortfolioContentState } from "@/components/portfolio-provider";
 import { About, Projects, Experience, Volunteer, Certifications, Skills, Contact, Footer } from "@/components/sections";
 
@@ -51,6 +52,7 @@ function PortfolioContent() {
       <Contact />
     </main>
     <Footer />
+    <BackToTop />
   </ImageViewerProvider>;
 }
 

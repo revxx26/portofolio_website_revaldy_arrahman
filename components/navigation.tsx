@@ -66,12 +66,13 @@ export function Navigation() {
       </nav>
       <div className="header-controls">
         <div className="language-switch" role="group" aria-label={t("Choose language")}>
-          <button type="button" lang="en" aria-label="English" aria-pressed={language === "en"} disabled={!ready} onClick={() => setLanguage("en")}>EN</button>
-          <button type="button" lang="id" aria-label="Bahasa Indonesia" aria-pressed={language === "id"} disabled={!ready} onClick={() => setLanguage("id")}>ID</button>
+          <button type="button" lang="en" aria-label="English" aria-pressed={language === "en"} disabled={!ready} onClick={() => { closeMenu(); setLanguage("en"); }}>EN</button>
+          <button type="button" lang="id" aria-label="Bahasa Indonesia" aria-pressed={language === "id"} disabled={!ready} onClick={() => { closeMenu(); setLanguage("id"); }}>ID</button>
         </div>
-        <button type="button" className="theme-toggle" disabled={!ready} onClick={toggleTheme} aria-label={t(theme === "dark" ? "Switch to light mode" : "Switch to dark mode")} title={t(theme === "dark" ? "Switch to light mode" : "Switch to dark mode")}>
+        <button type="button" className="theme-toggle" disabled={!ready} onClick={() => { closeMenu(); toggleTheme(); }} aria-label={t(theme === "dark" ? "Switch to light mode" : "Switch to dark mode")} title={t(theme === "dark" ? "Switch to light mode" : "Switch to dark mode")}>
           {theme === "dark" ? <Sun size={19} aria-hidden="true"/> : <Moon size={19} aria-hidden="true"/>}
         </button>
+      </div>
       <details className="mobile-navigation" ref={mobileMenu}>
         <summary className="menu-toggle" aria-label={t("Navigation menu")} aria-controls="mobile-navigation-links">
           <Menu className="menu-open-icon" size={22} aria-hidden="true"/><X className="menu-close-icon" size={22} aria-hidden="true"/>
@@ -80,7 +81,6 @@ export function Navigation() {
           {navigation.map(item => <a key={item} href={`#${item.toLowerCase()}`} aria-current={active === item.toLowerCase() ? "location" : undefined} onClick={closeMenu}>{t(item)}</a>)}
         </nav>
       </details>
-      </div>
     </div>
   </header>;
 }

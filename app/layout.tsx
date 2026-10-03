@@ -53,6 +53,20 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
+          id="reload-scroll-reset"
+          dangerouslySetInnerHTML={{
+            __html: `try {
+              if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
+                history.scrollRestoration = 'manual';
+                history.replaceState(history.state, '', location.pathname + location.search);
+                var resetScroll = function () { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); };
+                resetScroll();
+                window.addEventListener('pageshow', resetScroll, { once: true });
+              }
+            } catch {}`,
+          }}
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `try {
               var saved = localStorage.getItem('portfolio-theme');
