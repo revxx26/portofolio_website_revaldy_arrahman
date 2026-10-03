@@ -7,7 +7,13 @@
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "verify": "node scripts/verify-export.cjs",
-    "preview": "node scripts/preview-static.cjs"
+    "preview": "node scripts/preview-static.cjs",
+    "cms:dev": "npm --prefix studio run dev",
+    "cms:login": "npm --prefix studio run login",
+    "cms:seed": "npm --prefix studio run seed",
+    "cms:build": "npm --prefix studio run build",
+    "cms:deploy": "npm --prefix studio run deploy",
+    "cms:test": "node scripts/test-cms.mjs"
   },
   "dependencies": {
     "next": "^16.2.0",

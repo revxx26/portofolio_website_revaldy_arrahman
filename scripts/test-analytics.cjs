@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const ts=require('typescript');
+const calls=[];
+const sandbox={exports:{},window:{gtag:(...args)=>calls.push(args)}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/analytics.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,sandbox);
+sandbox.exports.track('cv_click');assert.equal(calls.length,0,'Unconfigured analytics must not collect');
+sandbox.window.portfolioAnalyticsId='G-TEST123456';
+sandbox.exports.track('gallery_open',{content_id:'project-example',image_count:2,email:'secret@example.com',message:'private message'});
+assert.equal(calls.length,1);assert.equal(calls[0][1],'gallery_open');
+assert.equal(JSON.stringify(calls[0][2]),'{"content_id":"project-example","image_count":2}');
+assert(!JSON.stringify(calls).includes('secret') && !JSON.stringify(calls).includes('private message'));
+console.log('Analytics checks passed: inactive before setup; only content ID and image count emitted.');

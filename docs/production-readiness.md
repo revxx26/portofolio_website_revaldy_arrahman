@@ -1,4 +1,10 @@
-# Production audit — 2 October 2026
+# Production readiness
+
+Audit terbaru: [3 October 2026](production-audit-2026-10-03.md), mencakup Sanity,
+galeri, demo Tableau, dua bahasa, dark mode dan build dari salinan folder bersih.
+Panduan pemindahan: [C:\website\portfolio](production-move.md).
+
+## Historical audit — 2 October 2026
 
 Scope: the current Next.js static portfolio, tested against the generated `out/` export through a local static server, rather than only the development server.
 
