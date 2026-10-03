@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 
-const title = "Revaldy Arrahman — Data Analytics & Engineering";
+const title = "Revaldy Arrahman";
 
 const description = "Information Systems student focused on data analytics and engineering. Explore Revaldy Arrahman's real projects, data operations experience, and toolkit.";
 
@@ -16,13 +16,13 @@ siteUrl.pathname='/';siteUrl.search='';siteUrl.hash='';
 
 export const metadata: Metadata = {
 
-  title: "Revaldy Arrahman — Data Analytics & Engineering",
+  title: "Revaldy Arrahman",
 
   description: "Information Systems student focused on data analytics and engineering. Explore Revaldy Arrahman's real projects, data operations experience, and toolkit.",
 
   metadataBase: siteUrl,
 
-  openGraph: {type:"website",title,description,siteName:"Revaldy Arrahman",locale:"en_US",alternateLocale:["id_ID"],images:[{url:"/images/social/portfolio-preview.png",width:1200,height:630,alt:"Revaldy Arrahman — Data Analytics & Engineering"}]},
+  openGraph: {type:"website",title,description,siteName:"Revaldy Arrahman",locale:"en_US",alternateLocale:["id_ID"],images:[{url:"/images/social/portfolio-preview.png",width:1200,height:630,alt:"Revaldy Arrahman"}]},
 
   twitter: {card:"summary_large_image",title,description,images:["/images/social/portfolio-preview.png"]},
 
