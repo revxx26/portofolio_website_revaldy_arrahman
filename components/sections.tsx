@@ -98,7 +98,7 @@ export function Experience() {
 
   return <section id="experience" className="experience section wrap">
 
-    <SectionHeading number="03" label={t("EXPERIENCE")} title={t("Working with data in practice.")}/>
+    <SectionHeading number="03" label={t("EXPERIENCE")} title={t("Work experience")}/>
 
     <div className="experience-list">{experiences.map(item => <article className="experience-row" key={item.id}>
 

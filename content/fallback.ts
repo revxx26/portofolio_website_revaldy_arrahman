@@ -8,7 +8,7 @@ export const fallbackContent = {
     opportunity: 'Interested in internships & early-career opportunities',
     aboutTitle: 'About me',
     aboutIntro: 'I’m an Information Systems student working with SQL, Python, Tableau, and Power BI to analyze data and build dashboards.',
-    aboutBody: 'In team projects, I contribute Python code for data analysis. I’ve also taught Excel to PAUD teachers and introduced Power BI to students at SMK Negeri 22 Jakarta.',
+    aboutBody: 'My experience includes processing sugarcane farmer records at Kementerian Pertanian and working on several data-related projects. I enjoy exploring data, solving problems, and building things that are actually useful.',
     university: 'Universitas Bina Sarana Informatika', universityLogo: '/images/organizations/ubsi-128.webp', degree: 'Information Systems', gpa: '3.84', semester: 'SEMESTER 7',
     contactIntro: 'I’m interested in Data Analyst and Data Engineer internships and early-career opportunities.',
   },
